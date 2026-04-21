@@ -28,7 +28,7 @@ serve(async (req) => {
     const prompt = `You are an expert art historian specializing in 18th-century Constantine art and architecture.
 Analyze the provided image and give a detailed written report with the following structure:
 1. Stylistic Decomposition: Identify European influences (like Baroque curves) versus Local Constantine innovations (like specific geometric patterns, unique color palettes, local styling).
-2. Botanical Identification: Carefully identify and name any plant or floral motifs present. Provide both their botanical (scientific) names and common names. Distinguish clearly between realistic representation and stylized local adaptation.`
+2. Botanical Identification & Algerian Roots: Carefully identify and name any plant or floral motifs present. Analyze these botanical patterns to prove their Algerian roots and distinguish them from generic Ottoman or European styles. Provide both their botanical (scientific) names and common names, detailing their symbolic meaning in Algerian heritage.`
 
     const body = {
       contents: [

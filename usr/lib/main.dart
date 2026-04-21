@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 import 'package:google_fonts/google_fonts.dart';
-import 'package:supabase_flutter/supabase_flutter.dart';
+import 'integrations/supabase.dart';
 import 'screens/home_screen.dart';
 import 'services/api_service.dart';
 import 'services/tts_service.dart';
@@ -9,11 +9,7 @@ import 'services/tts_service.dart';
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
   
-  // Initialize Supabase - Replace with your actual credentials when connected
-  await Supabase.initialize(
-    url: const String.fromEnvironment('SUPABASE_URL', defaultValue: 'https://placeholder.supabase.co'),
-    anonKey: const String.fromEnvironment('SUPABASE_ANON_KEY', defaultValue: 'placeholder_anon_key'),
-  );
+  await SupabaseConfig.ensureInitialized();
 
   runApp(
     MultiProvider(

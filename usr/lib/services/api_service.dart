@@ -1,8 +1,10 @@
 import 'dart:convert';
 import 'package:supabase_flutter/supabase_flutter.dart';
 
+import '../integrations/supabase.dart';
+
 class ApiService {
-  final _supabase = Supabase.instance.client;
+  final _supabase = SupabaseConfig.client;
 
   /// Analyzes the artwork using Gemini 3 Pro (Gemini 1.5 Pro) via Supabase Edge Function
   Future<Map<String, dynamic>> analyzeArtwork(String base64Image) async {
